@@ -1,0 +1,200 @@
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-wrapper">
+      <div class="about-content">
+        <h2>About MinWay</h2>
+        <p class="about-lead">
+          We believe in finding the minimal way to solve complex problems.
+        </p>
+        <p>
+          MinWay was founded on a simple principle: software should be elegant, efficient, and effective. 
+          We strip away unnecessary complexity to create solutions that are intuitive, powerful, and reliable.
+        </p>
+        <p>
+          Our approach focuses on understanding the core of each problem before designing a targeted solution. 
+          This ensures that every line of code serves a purpose and every feature adds value.
+        </p>
+        
+        <div class="values-container">
+          <h3>Our Values</h3>
+          <ul class="dot-list values-list">
+            <li>
+              <strong>Simplicity</strong>
+              <span>We believe the best solutions are often the simplest ones.</span>
+            </li>
+            <li>
+              <strong>Quality</strong>
+              <span>We never compromise on the quality of our code or our service.</span>
+            </li>
+            <li>
+              <strong>Innovation</strong>
+              <span>We continuously explore new approaches and technologies.</span>
+            </li>
+            <li>
+              <strong>Partnership</strong>
+              <span>We work closely with our clients as true partners in their success.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="about-visual">
+        <div class="path-visual">
+          <div class="dot-accent dot-accent-1"></div>
+          <div class="dot-accent dot-accent-2"></div>
+          <div class="dot-accent dot-accent-3"></div>
+          <div class="curve-path"></div>
+          
+          <div class="value-box value-box-1">
+            <span>Clear</span>
+          </div>
+          <div class="value-box value-box-2">
+            <span>Efficient</span>
+          </div>
+          <div class="value-box value-box-3">
+            <span>Purposeful</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: var(--color-background);
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(var(--space-xl) + 20px);
+  }
+
+  .about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .about-content {
+    flex: 1;
+  }
+
+  .about-lead {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+
+  .values-container {
+    margin-top: var(--space-lg);
+  }
+
+  .values-list {
+    margin-top: var(--space-md);
+  }
+
+  .values-list li {
+    margin-bottom: var(--space-md);
+  }
+
+  .values-list strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+  }
+
+  .values-list span {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+
+  .about-visual {
+    flex: 1;
+    height: 500px;
+    position: relative;
+  }
+
+  .path-visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .dot-accent {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .dot-accent-1 {
+    top: 100px;
+    left: 50px;
+  }
+
+  .dot-accent-2 {
+    top: 250px;
+    right: 100px;
+  }
+
+  .dot-accent-3 {
+    bottom: 80px;
+    left: 100px;
+  }
+
+  .curve-path {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+    opacity: 0.6;
+  }
+
+  .value-box {
+    position: absolute;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-light);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .value-box-1 {
+    top: 80px;
+    left: 100px;
+  }
+
+  .value-box-2 {
+    top: 230px;
+    right: 60px;
+  }
+
+  .value-box-3 {
+    bottom: 100px;
+    left: 160px;
+  }
+
+  @media (max-width: 992px) {
+    .about-wrapper {
+      flex-direction: column;
+    }
+
+    .about-visual {
+      height: 400px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-visual {
+      height: 300px;
+    }
+  }
+</style> 

@@ -1,0 +1,154 @@
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Our Services</h2>
+      <p class="section-subtext">We offer comprehensive software development solutions with a focus on minimalism, efficiency, and quality.</p>
+      <div class="section-divider">
+        <div class="divider-dot"></div>
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M13 3H4a1 1 0 0 0-1 1v9H2V4a2 2 0 0 1 2-2h9v1Zm-8 2v14h14V5H5Zm14-1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h15Zm-6 7v-2h-2v2h-1v2h1v2h2v-2h1v-2h-1Z"/>
+          </svg>
+        </div>
+        <h3>Web Development</h3>
+        <p>Custom websites and web applications built with modern technologies and best practices. Our focus is on clean code, performance, and user experience.</p>
+        <div class="service-path"></div>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18 22H6c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2Zm-6-2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18 17H6V4h12v13Z"/>
+          </svg>
+        </div>
+        <h3>Mobile Applications</h3>
+        <p>Native and cross-platform mobile applications for iOS and Android. We create mobile experiences that are intuitive, fast, and efficient.</p>
+        <div class="service-path"></div>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm0-2a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-3a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+          </svg>
+        </div>
+        <h3>API Development</h3>
+        <p>Robust and scalable APIs that connect systems and enable seamless data flow. We design APIs that are secure, efficient, and developer-friendly.</p>
+        <div class="service-path"></div>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21 12.593v6.215A2.19 2.19 0 0 1 18.808 21H5.192A2.19 2.19 0 0 1 3 18.808V5.192A2.19 2.19 0 0 1 5.192 3h6.215c-.198.8-.198 1.6 0 2.4H5.192v13.616h13.616v-6.215c.8.198 1.6.198 2.4 0h-.208Zm-3.6-6h2.194L11 14.987l-1.733-1.987L16.6 6.593Zm.6-3.593 4.8 4.8-1.8 1.8-4.8-4.8 1.8-1.8Z"/>
+          </svg>
+        </div>
+        <h3>Software Consulting</h3>
+        <p>Strategic guidance on software architecture, technology selection, and development processes. We help you make informed decisions for long-term success.</p>
+        <div class="service-path"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    background-color: var(--color-background);
+    padding-top: calc(var(--space-xl) + 20px);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-subtext {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-muted);
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--space-md) 0;
+  }
+
+  .divider-line {
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-accent);
+  }
+
+  .divider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    margin: 0 var(--space-sm);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .service-card {
+    background-color: var(--color-light);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform var(--transition-fast);
+    overflow: hidden;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .service-icon {
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+  }
+
+  .service-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-card p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+
+  .service-path {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-slow);
+  }
+
+  .service-card:hover .service-path {
+    transform: scaleX(1);
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

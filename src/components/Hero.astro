@@ -1,0 +1,167 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>The Minimal Way<br>to Software Excellence</h1>
+      <p class="subtitle">
+        We build elegant, efficient, and high-performing software solutions with minimal complexity and maximum impact.
+      </p>
+      <div class="hero-cta">
+        <a href="#services" class="button nav-link">Explore Services</a>
+        <a href="#contact" class="text-link flow-line nav-link">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-shape">
+        <div class="dot dot-start"></div>
+        <div class="path"></div>
+        <div class="dot dot-end"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.02);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+  }
+
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .hero-content {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+    margin-bottom: var(--space-lg);
+    max-width: 500px;
+  }
+
+  .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .text-link {
+    font-weight: 600;
+    padding: var(--space-sm) 0;
+  }
+
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .hero-shape {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  .dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .dot-start {
+    top: 50px;
+    left: 50px;
+    animation: pulse 3s infinite alternate;
+  }
+
+  .dot-end {
+    bottom: 50px;
+    right: 50px;
+    animation: pulse 3s infinite alternate-reverse;
+  }
+
+  .path {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 180px;
+    height: 180px;
+    border-bottom: 3px solid var(--color-accent);
+    border-right: 3px solid var(--color-accent);
+    border-bottom-right-radius: 100%;
+    opacity: 0.8;
+    animation: draw 4s forwards;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes draw {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero .container {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--space-lg);
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+    }
+
+    .subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+  }
+</style> 

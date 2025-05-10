@@ -1,0 +1,174 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "MinWay - The Minimal Way to Software Excellence" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | MinWay</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="/">
+              <img src="/logo.jpeg" alt="MinWay Logo" width="80" height="80" />
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/" class="flow-line">Home</a></li>
+            <li><a href="#services" class="flow-line nav-link">Services</a></li>
+            <li><a href="#projects" class="flow-line nav-link">Projects</a></li>
+            <li><a href="#about" class="flow-line nav-link">About</a></li>
+            <li><a href="#contact" class="flow-line nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>MinWay</h4>
+              <ul class="dot-list">
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Contact</h4>
+              <ul class="dot-list">
+                <li>info@minway.dev</li>
+                <li>+1 (555) 123-4567</li>
+                <li>123 Tech Street, Suite 100<br>San Francisco, CA 94103</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; {new Date().getFullYear()} MinWay. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const targetId = link.getAttribute('href')?.substring(1) || '';
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+              const headerOffset = 100; // Increased offset to account for fixed header
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    padding: var(--space-sm) 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(248, 247, 244, 0.85);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .site-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--space-md);
+  }
+
+  main {
+    padding-top: 80px; /* Header height + extra space */
+  }
+
+  footer {
+    background-color: var(--color-background);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: var(--space-lg) 0;
+    margin-top: var(--space-xl);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: var(--space-xl);
+  }
+
+  .footer-column h4 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .copyright {
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: var(--space-md);
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .nav-links {
+      display: none;
+    }
+  }
+</style> 
